@@ -1,8 +1,11 @@
 import React from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import styles from "./CardDetail.module.css";
 
 
 export default function CardDetail() {
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   const [cruiseDetail, setCruiseDetail] = React.useState({});
   React.useEffect(() => {
@@ -15,11 +18,15 @@ export default function CardDetail() {
       .catch((error) => console.log(error));
     return () => setCruiseDetail({});
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [id]);
+
+  const backToHome = () => {
+    navigate('/');
+  }
 
   return (
     <div className={styles.container}>
-      <button className={styles.buttonBack}>
+      <button className={styles.buttonBack} onClick={backToHome}>
         Volver
       </button>
 
