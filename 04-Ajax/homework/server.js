@@ -51,7 +51,7 @@ let amigos = [
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/amigos", (req, res) => {
+app.get("/amigos", (_req, res) => {
   res.status(200).json(amigos);
 });
 
