@@ -122,6 +122,7 @@ const Contact = () => {
       <textarea
         name='message'
         placeholder='Escribe tu mensaje...'
+        type="text"
         value={inputs.message}
         onChange={handleChange}
         className={errors.message ? 'warning' : ''}
