@@ -2,6 +2,10 @@
 
 .home {
   .intro {
+    img {
+      border-radius: 20px;
+      margin: 10px;
+    }
     h2 {
       padding: 15px;
     }
@@ -39,7 +43,7 @@
   .actual {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
+    padding: 20px 20px;
     display: flex;
     justify-content: center;
 
@@ -55,6 +59,7 @@
       }
 
       .btn {
+        .button-register(@btn-bg-color, @porcelain)
       }
     }
 
@@ -69,4 +74,35 @@
       }
     }
   }
+}
+@media @phone {
+  .home{
+    .intro img {
+    width: calc(100vw - 18px);
+    margin: 0.2em 0.7em;
+  }
+  .music-images .auricular {
+    display: block;
+    width: 95%;
+    height: auto;
+  }
+  .actual {
+    flex-direction: column-reverse;
+    margin-top: 0%;
+    .actual-text{
+      padding: 15px;
+      width: 100%;
+      .btn{
+        width: calc(100vw - 20px);
+        padding: 1.3em;
+        text-align: center;
+        font-size: 1.8em;
+      }
+    }
+    .actual-img{
+      width: calc(100vw - 25px);
+      margin-left: 0%;
+    }
+  }
+}
 }
