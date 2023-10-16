@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: center;
   align-items: flex-start;
-  color: #f6f4e6;
+  color: #e6ebf6;
 }
 
 .divContentTitle {
   width: 100vw;
-  height: 100px;
+  height: 70px;
   display:block;
   justify-content: center;
   align-items: center;
@@ -20,17 +20,16 @@
 }
 
 .title {
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
-  margin-top: -0.5em;
+  margin-top: -0.7em;
+  flex: 1;
 }
 
 .divContentTitle input {
   border-radius: 0.5em;
-  margin-top: 0.4em;
-  margin-left: 0.2em;
-  padding: 0.2em;
+  padding: 0.1em;
   border: solid #f6f4e6 ;
   color: #363334 ;
-  font-size: 1em;
+  font-size: 1.5em;
 }
