@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    padding: 10px, 10px;
+    font-family: Calibri, sans-serif;
+    font-size: 24px;
+    color: #fcfafa;
+    background-color: #080606;
+    border-radius: 10px;
+}
+.title:hover {
+    background-color: rgb(246, 245, 243);
+    color: #080606;
+}
+
+.contButtons {
+    padding: 10px 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.inccountdec {
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+}
+
+
+.button {
+    background-color: #0a0808;
+    margin: 10px;
+    font-size: 35px;
+    color: rgb(251, 238, 238);
+    border-radius: 25px;
+}
+
+.button:hover {
+    background-color: #f8f3f3;
+    color: #030303;
+}
+
+.otrosBotones {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.oBoton {
+    padding: 0px 20px 0px 20px;
+    background-color: #030303;
+    color: #f8f3f3;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Calibri, sans-serif;
+}
+.oBoton:hover {
+    background-color: #f8f3f3;
+    color: #030303;
+}
+
+.jesu {
+    text-align: right;
+    margin-top: 4px;
+    padding: 4px 4px;
+    font-size: 10px;
+    background-color: #030303;
+    color: #faf6f6;
+    border-radius: 5px;
+}
+.jesu:hover {
+    background-color: #fdf9f9;
+    color: #010101;
+}
