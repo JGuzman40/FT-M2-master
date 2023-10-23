@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import Caja from '../../assets/caja.png';
+import { addProduct } from '../../redux/actions/actions';
 import './form.css';
 
 class Form extends React.Component{
@@ -11,16 +13,20 @@ class Form extends React.Component{
          name: "",
          price: "",
          id: ""
-      }
+      };
    }
 
    handleInputChange = (event) => {
       this.setState({ ...this.state, [event.target.name]: event.target.value });
-   }
+   };
+
+   handleSubmit = () => {
+      this.props.addProduct({...this.state, id: Date.now()})
+   };
 
    render(){
       return (
-         <form className='formBg'>
+         <form className='formBg' onSubmit={this.handleSubmit}>
             <div className='inputBox'>
                <label>Nombre: </label>
                <input
@@ -45,6 +51,10 @@ class Form extends React.Component{
    }
 }
 
-export function mapDispatchToProps() {}
+export function mapDispatchToProps(dispatch) {
+   return {
+      addProduct: (product)=>dispatch(addProduct(product))
+   }
+}
 
 export default connect(null, mapDispatchToProps)(Form);
